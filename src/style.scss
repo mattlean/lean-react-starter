@@ -1,0 +1,9 @@
+body {
+  background-color: papayawhip;
+  background-image: url('./assets/img/osi_symbol.png');
+}
+
+/* This class will be filtered out by PurifyCSS since it is unused */
+.unused {
+  color: #4a412a;
+}

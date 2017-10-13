@@ -4,15 +4,59 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --env production",
+    "lint:js": "eslint src/ webpack.*.js --cache",
+    "lint:style": "stylelint src/**/*.css src/**/*.scss",
+    "start": "nodemon --watch webpack.config.babel.js --watch webpack.parts.js --exec \"webpack-dev-server --env dev\"",
+    "start:debug": "node-nightly --inspect-brk node_modules/.bin/webpack --env debug",
+    "stats": "webpack --env production --profile --json > stats.json",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/IsaacLean/lean-react-starter.git"
   },
-  "author": "",
+  "author": "Matthew Lean",
   "bugs": {
     "url": "https://github.com/IsaacLean/lean-react-starter/issues"
   },
-  "homepage": "https://github.com/IsaacLean/lean-react-starter#readme"
+  "homepage": "https://github.com/IsaacLean/lean-react-starter#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-minify-webpack-plugin": "^0.2.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.7",
+    "cssnano": "^3.10.0",
+    "eslint": "^4.7.2",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-react": "^7.4.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^1.1.4",
+    "glob": "^7.1.2",
+    "html-webpack-plugin": "^2.30.1",
+    "node-nightly": "^1.7.2",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.12.1",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
+    "postcss-loader": "^2.0.6",
+    "purify-css": "^1.2.5",
+    "purifycss-webpack": "^0.7.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "stylelint": "^8.1.1",
+    "stylelint-webpack-plugin": "^0.9.0",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1",
+    "webpack-merge": "^4.1.0"
+  },
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
 }

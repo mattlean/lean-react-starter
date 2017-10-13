@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "color-hex-case": ["lower", {"severity": "warning"}],
+    "indentation": 2
+  }
+}
