@@ -1,16 +1,16 @@
 {
   "name": "lean-react-starter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack --env production",
     "lint:js": "eslint src/ webpack.*.js --cache",
     "lint:style": "stylelint src/**/*.css src/**/*.scss",
+    "preview": "http-server ./build -p 9001",
     "start": "nodemon --watch webpack.config.babel.js --watch webpack.parts.js --exec \"webpack-dev-server --env dev\"",
     "start:debug": "node-nightly --inspect-brk node_modules/.bin/webpack --env debug",
-    "stats": "webpack --env production --profile --json > stats.json",
-    "watch": "webpack --watch"
+    "stats": "webpack --env production --profile --json > stats.json"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
     "file-loader": "^1.1.4",
     "glob": "^7.1.2",
     "html-webpack-plugin": "^2.30.1",
+    "http-server": "^0.10.0",
     "node-nightly": "^1.7.2",
     "node-sass": "^4.5.3",
     "nodemon": "^1.12.1",
@@ -56,6 +57,7 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0-beta",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   }
