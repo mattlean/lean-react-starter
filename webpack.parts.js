@@ -22,7 +22,7 @@ exports.clean = (path) => ({
   ]
 });
 
-exports.devServer = ({contentBase, host, port} = {}) => ({
+exports.devServer = ({ contentBase, host, port } = {}) => ({
   devServer: {
     contentBase,
     historyApiFallback: true,
@@ -40,7 +40,7 @@ exports.extractBundles = (bundles) => ({
   )
 });
 
-exports.extractStyles = ({exclude, include, use}) => {
+exports.extractStyles = ({ exclude, include, use }) => {
   const plugin = new ExtractTextPlugin({
     filename: '[name].[contenthash:8].css'
   });
@@ -63,11 +63,11 @@ exports.extractStyles = ({exclude, include, use}) => {
   };
 };
 
-exports.genSourceMaps = ({type}) => ({
+exports.genSourceMaps = ({ type }) => ({
   devtool: type
 });
 
-exports.lintJS = ({exclude, include, options}) => ({
+exports.lintJS = ({ exclude, include, options }) => ({
   module: {
     rules: [
       {
@@ -87,7 +87,7 @@ exports.lintStyles = () => ({
   ]
 });
 
-exports.minCSS = ({options}) => ({
+exports.minCSS = ({ options }) => ({
   plugins: [
     new OptimizeCSSAssetsPlugin({
       canPrint: false,
@@ -101,13 +101,13 @@ exports.minJS = () => ({
   plugins: [new BabelWebpackPlugin()]
 });
 
-exports.purifyCSS = ({paths}) => ({
+exports.purifyCSS = ({ paths }) => ({
   plugins: [
     new PurifyCSSPlugin({paths})
   ]
 });
 
-exports.loadImgs = ({exclude, include, options} = {}) => ({
+exports.loadImgs = ({ exclude, include, options } = {}) => ({
   module: {
     rules: [
       {
@@ -125,7 +125,7 @@ exports.loadImgs = ({exclude, include, options} = {}) => ({
   }
 });
 
-exports.loadJS = ({exclude, include}) => ({
+exports.loadJS = ({ exclude, include }) => ({
   module: {
     rules: [
       {
@@ -141,7 +141,7 @@ exports.loadJS = ({exclude, include}) => ({
   }
 });
 
-exports.loadStyles = ({exclude, include} = {}) => ({
+exports.loadStyles = ({ exclude, include } = {}) => ({
   module: {
     rules: [
       {

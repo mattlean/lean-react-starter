@@ -2,16 +2,15 @@
 This codebase can help you jump-start your next React project and let you focus on the just code you want.
 
 ## Features
-### React & Friends
+### Libraries
 Use the latest trends so you can fit in with the Silicon Valley hipsters:
 
 * [React](https://reactjs.org/) (v16)
 * [React Router](https://github.com/ReactTraining/react-router) (v4)
-* [Flow](https://flow.org)
-
+* [Bootstrap](https://getbootstrap.com) (v4 Beta)
 
 ### Easy Setup
-All dependencies are managed through npm. Type ```npm install``` to download and install everything you need to run the project.
+All dependencies are managed through npm. Run ```npm install``` to download and install everything you need to run the project.
 
 
 ### Convenient Development
@@ -29,11 +28,11 @@ Use some of JavaScript's latest features with ES2015. [Babel](https://babeljs.io
 
 
 ### Testing
-Jest + Enzyme
+Test your scripts and components with [Jest](https://facebook.github.io/jest) by running ```npm test```.
 
 
 ### Better Style Development
-Extend the capabilities of CSS with [Sass](http://sass-lang.com). Use newer CSS features and let [Autoprefixer](https://github.com/postcss/autoprefixer) handle adding the vendor prefixes for you, making you type less and ensuring your application will render correctly across different browsers.
+Build responsive, cross-browser compatible styles with Bootstrap. Extend the capabilities of CSS with [Sass](http://sass-lang.com). Use newer CSS features and let [Autoprefixer](https://github.com/postcss/autoprefixer) handle adding the vendor prefixes for you, making you type less and ensuring your application will render correctly across different browsers.
 
 
 ### webpack
