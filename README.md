@@ -28,7 +28,7 @@ Use some of JavaScript's latest features with ES2015. [Babel](https://babeljs.io
 
 
 ### Testing
-Test your scripts and components with [Jest](https://facebook.github.io/jest) by running ```npm test```.
+Test your scripts and components with [Jest](https://facebook.github.io/jest) by running ```npm test``` to make sure your code is running properly.
 
 
 ### Better Style Development

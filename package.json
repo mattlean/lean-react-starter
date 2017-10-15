@@ -5,14 +5,17 @@
   "main": "src/script.js",
   "scripts": {
     "build": "webpack --env production",
-    "lint:js": "eslint src/ webpack.*.js --cache",
+    "lint:js": "eslint --cache src/ webpack.config.babel.js webpack.parts.js",
+    "lint:js:fix": "eslint --cache --fix src/ webpack.config.babel.js webpack.parts.js",
     "lint:style": "stylelint src/**/*.css src/**/*.scss",
     "preview": "http-server ./build -p 9001",
     "start": "nodemon --watch webpack.config.babel.js --watch webpack.parts.js --exec \"webpack-dev-server --env dev\"",
     "start:debug": "node-nightly --inspect-brk node_modules/.bin/webpack --env debug",
     "stats": "webpack --env production --profile --json > stats.json",
     "test": "jest",
-    "test:update": "jest -u"
+    "test:coverage": "jest --coverage",
+    "test:update": "jest -u",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
