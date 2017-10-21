@@ -28,7 +28,9 @@ Use some of JavaScript's latest features with ES2015. [Babel](https://babeljs.io
 
 
 ### Testing
-Test your scripts and components with [Jest](https://facebook.github.io/jest) by running ```npm test``` to make sure your code is running properly.
+Test your scripts and components with [Jest](https://facebook.github.io/jest) and [Enzyme](http://airbnb.io/enzyme) by running ```npm test``` to make sure your code is running properly.
+
+Run code coverage analysis with [Istanbul](https://istanbul.js.org) by running ```npm run test:coverage``` to tell you when code is being executed so you can decide if you need to rewrite code, remove unnecessary code, or require additional testing.
 
 
 ### Better Style Development

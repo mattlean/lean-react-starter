@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BSStarterTemplate renders correctly 1`] = `
+<div
+  id="bs-starter-template"
+>
+  <Navbar
+    brand="Navbar"
+    navItems={
+      Array [
+        Object {
+          "liClass": "active",
+          "text": "Home",
+        },
+        Object {
+          "text": "Link",
+        },
+        Object {
+          "aClass": "disabled",
+          "text": "Disabled",
+        },
+      ]
+    }
+  />
+  <div
+    className="container"
+  >
+    <div
+      className="starter-template"
+    >
+      <h1>
+        Bootstrap starter template
+      </h1>
+      <p
+        className="lead"
+      >
+        Use this document as a way to quickly start any new project.
+        <br />
+        All you get is this text and a mostly barebones HTML document.
+      </p>
+    </div>
+  </div>
+</div>
+`;
