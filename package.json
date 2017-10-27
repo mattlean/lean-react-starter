@@ -1,12 +1,13 @@
 {
   "name": "lean-react-starter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "src/script.js",
   "scripts": {
     "build": "webpack --env production",
     "flow": "flow",
     "flow-typed": "flow-typed",
+    "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"src/**/*.{js,jsx}\"",
     "lint:js": "eslint --cache src/ webpack.config.babel.js webpack.parts.js",
     "lint:js:fix": "eslint --cache --fix src/ webpack.config.babel.js webpack.parts.js",
     "lint:style": "stylelint src/**/*.css src/**/*.scss",
@@ -63,6 +64,7 @@
     "nodemon": "^1.12.1",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "postcss-loader": "^2.0.6",
+    "prettier": "^1.7.4",
     "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0",
     "react-test-renderer": "^16.0.0",

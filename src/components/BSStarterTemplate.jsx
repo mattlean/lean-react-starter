@@ -4,13 +4,10 @@ import Navbar from './Navbar';
 
 const BSStarterTemplate = () => (
   <div id="bs-starter-template">
-    <Navbar brand="Navbar" navItems={
-      [
-        {liClass: 'active', text: 'Home'},
-        {text: 'Link'},
-        {aClass: 'disabled', text: 'Disabled'}
-      ]
-    } />
+    <Navbar
+      brand="Navbar"
+      navItems={[{ liClass: 'active', text: 'Home' }, { text: 'Link' }, { aClass: 'disabled', text: 'Disabled' }]}
+    />
     <div className="container">
       <div className="starter-template">
         <h1>Bootstrap starter template</h1>

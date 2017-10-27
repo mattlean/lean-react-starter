@@ -4,7 +4,7 @@ import React from 'react';
 
 import BSStarterTemplate from '../BSStarterTemplate';
 
-Enzyme.configure({adapter: new Adapter()});
+Enzyme.configure({ adapter: new Adapter() });
 
 test('BSStarterTemplate renders correctly', () => {
   const component = Enzyme.shallow(<BSStarterTemplate />);

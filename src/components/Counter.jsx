@@ -28,21 +28,18 @@ class Counter extends Component<Props, State> {
   }
 
   increment() {
-    this.setState({value: this.state.value + 1});
+    this.setState({ value: this.state.value + 1 });
   }
 
   decrement() {
-    this.setState({value: this.state.value - 1});
+    this.setState({ value: this.state.value - 1 });
   }
 
   render() {
     return (
       <p>
-        <b>{this.props.name}</b><br/>
-        { ' ' }
-        Clicked: {this.state.value} times
-        {' '}
-        <button onClick={this.increment}>+</button>
+        <b>{this.props.name}</b>
+        <br /> Clicked: {this.state.value} times <button onClick={this.increment}>+</button>
         <button onClick={this.decrement}>-</button>
       </p>
     );
