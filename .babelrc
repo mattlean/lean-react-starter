@@ -12,6 +12,7 @@
       },
       "loose": true,
       "modules": false
-    }]
+    }],
+    "flow"
   ]
 }
