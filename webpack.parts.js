@@ -1,3 +1,4 @@
+/* eslint import/no-extraneous-dependencies: off */
 const BabelWebpackPlugin = require('babel-minify-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const cssnano = require('cssnano');
@@ -11,7 +12,7 @@ exports.autoprefix = () => ({
   loader: 'postcss-loader',
   options: {
     plugins: () => ([
-      require('autoprefixer')()
+      require('autoprefixer')() // eslint-disable-line global-require
     ])
   }
 });
@@ -71,6 +72,7 @@ exports.lintJS = ({ exclude, include, options }) => ({
   module: {
     rules: [
       {
+        enforce: 'pre',
         exclude,
         include,
         loader: 'eslint-loader',

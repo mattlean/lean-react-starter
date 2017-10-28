@@ -1,16 +1,44 @@
+// @flow
+
 import React from 'react';
 
 import NavItem from './NavItem';
 
-const Navbar = ({ brand, navItems }) => {
-  const navItemList = navItems.map((navItem, index) => (
-    <NavItem key={index} aClass={navItem.aClass} liClass={navItem.liClass} text={navItem.text} />
-  ));
+type NavItemObj = {
+  aClass: string,
+  href: string,
+  liClass?: string,
+  text?: string
+};
+
+type Props = {
+  brand?: string,
+  navItems?: Array<NavItemObj>
+};
+
+const Navbar = (props: Props) => {
+  const navItemList = [];
+
+  if (props.navItems) {
+    if (props.navItems.length > 0) {
+      Object.values(props.navItems).forEach(navItem => {
+        navItemList.push(
+          <NavItem
+            key={navItem.text}
+            aClass={navItem.aClass}
+            href={navItem.href}
+            liClass={navItem.liClass}
+            text={navItem.text}
+          />
+        );
+      });
+    }
+  }
 
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a className="navbar-brand" href="#">
-        {brand}
+      <a className="navbar-brand" href="/bootstrap_starter_template">
+        {props.brand}
       </a>
       <div className="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul className="navbar-nav mr-auto">{navItemList}</ul>
@@ -24,5 +52,7 @@ const Navbar = ({ brand, navItems }) => {
     </nav>
   );
 };
+
+Navbar.defaultProps = { brand: '', navItems: [] };
 
 export default Navbar;

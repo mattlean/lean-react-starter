@@ -6,7 +6,11 @@ const BSStarterTemplate = () => (
   <div id="bs-starter-template">
     <Navbar
       brand="Navbar"
-      navItems={[{ liClass: 'active', text: 'Home' }, { text: 'Link' }, { aClass: 'disabled', text: 'Disabled' }]}
+      navItems={[
+        { href: '/', liClass: 'active', text: 'Home' },
+        { href: '/', text: 'Link' },
+        { aClass: 'disabled', href: '#', text: 'Disabled' }
+      ]}
     />
     <div className="container">
       <div className="starter-template">

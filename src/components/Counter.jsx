@@ -11,9 +11,6 @@ type State = {
 };
 
 class Counter extends Component<Props, State> {
-  increment: Function;
-  decrement: Function;
-
   constructor(props: Props) {
     super(props);
 
@@ -34,6 +31,9 @@ class Counter extends Component<Props, State> {
   decrement() {
     this.setState({ value: this.state.value - 1 });
   }
+
+  increment: Function;
+  decrement: Function;
 
   render() {
     return (
