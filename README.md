@@ -18,9 +18,13 @@ Develop locally on your computer with [webpack-dev-server](https://github.com/we
 
 While it's running, any changes you do to your JavaScript, styles, or HTML will trigger the following:
 * Automatic browser refresh so you can see changes from your code immediately
-* Lint your JavaScript with [ESLint](https://eslint.org) and Sass/CSS with [stylelint](https://github.com/stylelint/stylelint) to avoid errors and enforce consistent conventions in your code
+* Lint your JavaScript with [ESLint](https://eslint.org)
+* Keep your JavaScript formatting clear and consistent with [Prettier](https://prettier.io)
+* Lint your Sass/CSS with [stylelint](https://github.com/stylelint/stylelint) to avoid errors and enforce consistent conventions in your code
 
 Source maps for both JavaScript and CSS make it easy to debug even after all of the transformations your code goes through.
+
+Avoid bugs and problems understanding your code by type checking with [Flow](https://flow.org).
 
 
 ### ECMAScript 2015 Support

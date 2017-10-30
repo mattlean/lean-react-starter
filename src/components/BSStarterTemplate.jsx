@@ -4,14 +4,15 @@ import Navbar from './Navbar';
 
 const BSStarterTemplate = () => (
   <div id="bs-starter-template">
-    <Navbar brand="Navbar" navItems={
-      [
-        {liClass: 'active', text: 'Home'},
-        {text: 'Link'},
-        {aClass: 'disabled', text: 'Disabled'}
-      ]
-    } />
-    <div className="container">
+    <Navbar
+      brand="Navbar"
+      navItems={[
+        { href: '/', liClass: 'active', text: 'Home' },
+        { href: '/', text: 'Link' },
+        { aClass: 'disabled', href: '#', text: 'Disabled' }
+      ]}
+    />
+    <main className="container">
       <div className="starter-template">
         <h1>Bootstrap starter template</h1>
         <p className="lead">
@@ -20,7 +21,7 @@ const BSStarterTemplate = () => (
           All you get is this text and a mostly barebones HTML document.
         </p>
       </div>
-    </div>
+    </main>
   </div>
 );
 

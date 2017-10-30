@@ -5,11 +5,8 @@
     "jest": true,
     "node": true
   },
-  "extends": [
-    "plugin:flowtype/recommended",
-    "eslint:recommended",
-    "plugin:react/recommended"
-  ],
+  "extends": ["plugin:flowtype/recommended", "airbnb", "prettier", "prettier/react"],
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
@@ -18,14 +15,8 @@
     "ecmaVersion": 2016,
     "sourceType": "module"
   },
-  "plugins": [
-    "flowtype",
-    "react"
-  ],
+  "plugins": ["flowtype", "prettier", "react"],
   "rules": {
-    "indent": ["warn", 2],
-    "linebreak-style": ["error", "unix"],
-    "react/prop-types": 0,
-    "semi": ["error", "always"]
+    "jsx-a11y/anchor-is-valid": 0
   }
 }

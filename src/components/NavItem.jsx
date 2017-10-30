@@ -1,12 +1,32 @@
+// @flow
+
 import React from 'react';
 
-const NavItem = ({ keyVal, aClass, liClass, text }) => {
-  const liClassVal = liClass ? `nav-item ${liClass}` : 'nav-item';
-  const aClassVal = aClass ? `nav-link ${aClass}` : 'nav-link';
+type Props = {
+  keyVal: string,
+  aClass?: string,
+  href: string,
+  liClass?: string,
+  text?: string
+};
 
-  return <li className={liClassVal} key={keyVal}>
-    <a className={aClassVal} href="#">{text}</a>
-  </li>;
+const NavItem = (props: Props) => {
+  const liClassVal = props.liClass ? `nav-item ${props.liClass}` : 'nav-item';
+  const aClassVal = props.aClass ? `nav-link ${props.aClass}` : 'nav-link';
+
+  return (
+    <li className={liClassVal} key={props.keyVal}>
+      <a className={aClassVal} href={props.href}>
+        {props.text}
+      </a>
+    </li>
+  );
+};
+
+NavItem.defaultProps = {
+  aClass: '',
+  liClass: '',
+  text: ''
 };
 
 export default NavItem;

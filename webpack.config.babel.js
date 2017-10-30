@@ -16,7 +16,7 @@ const commonConfig = merge([
     context: __dirname,
 
     entry: {
-      app: PATHS.src + '/script.js'
+      app: `${PATHS.src}/script.jsx`
     },
 
     output: {
@@ -26,7 +26,7 @@ const commonConfig = merge([
 
     plugins: [
       new HtmlWebpackPlugin({
-        template: PATHS.src + '/index.ejs'
+        template: `${PATHS.src}/index.ejs`
       })
     ],
 

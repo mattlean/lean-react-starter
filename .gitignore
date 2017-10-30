@@ -3,5 +3,6 @@ coverage/
 flow-typed/
 node_modules/
 .eslintcache
+lean-react-starter.sublime-workspace
 npm-debug.log
 stats.json
