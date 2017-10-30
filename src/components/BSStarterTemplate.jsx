@@ -12,7 +12,7 @@ const BSStarterTemplate = () => (
         { aClass: 'disabled', href: '#', text: 'Disabled' }
       ]}
     />
-    <div className="container">
+    <main className="container">
       <div className="starter-template">
         <h1>Bootstrap starter template</h1>
         <p className="lead">
@@ -21,7 +21,7 @@ const BSStarterTemplate = () => (
           All you get is this text and a mostly barebones HTML document.
         </p>
       </div>
-    </div>
+    </main>
   </div>
 );
 
