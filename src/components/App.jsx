@@ -1,17 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 import BSStarterTemplate from './BSStarterTemplate';
 import Counter from './Counter';
-import counter from '../reducers';
 import Error404 from './Error404';
 import HelloWorld from './HelloWorld';
 import Image from './Image';
 import MainNav from './MainNav';
-
-const store = createStore(counter);
+import store from '../store';
 
 const App = () => (
   <Router>
