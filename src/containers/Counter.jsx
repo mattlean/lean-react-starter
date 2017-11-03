@@ -19,16 +19,15 @@ class Counter extends Component<Props> {
   }
 
   incrementAsync: Function;
-  incrementIfOdd: Function;
+  incrementAsync() {
+    setTimeout(this.props.onIncrement, 1000);
+  }
 
+  incrementIfOdd: Function;
   incrementIfOdd() {
     if (this.props.value % 2 !== 0) {
       this.props.onIncrement();
     }
-  }
-
-  incrementAsync() {
-    setTimeout(this.props.onIncrement, 1000);
   }
 
   render() {

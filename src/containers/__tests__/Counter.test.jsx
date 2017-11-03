@@ -25,7 +25,6 @@ function setup(value = 0) {
 describe('Counter component', () => {
   it('renders correctly', () => {
     const { component } = setup();
-
     expect(component).toMatchSnapshot();
   });
 
@@ -58,13 +57,13 @@ describe('Counter component', () => {
     expect(actions.onIncrement).toBeCalled();
   });
 
-  it('third button should call onIncrement if the counter is odd', () => {
+  it('third button should call onIncrement if the counter is odd and negative', () => {
     const { actions, buttons } = setup(-43);
     buttons.at(2).simulate('click');
     expect(actions.onIncrement).toBeCalled();
   });
 
-  it('fourth button should call onCremenet in a second', done => {
+  it('fourth button should call onIncrement in a second', done => {
     const { actions, buttons } = setup();
     buttons.at(3).simulate('click');
     setTimeout(() => {
