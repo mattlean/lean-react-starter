@@ -14,18 +14,21 @@ class Counter extends Component<Props> {
   constructor(props: Props) {
     super(props);
 
-    // this.increment = this.increment.bind(this);
-    // this.incrementAsync = this.incrementAsync.bind(this);
+    this.incrementAsync = this.incrementAsync.bind(this);
     this.incrementIfOdd = this.incrementIfOdd.bind(this);
-    // this.decrement = this.decrement.bind(this);
   }
 
+  incrementAsync: Function;
   incrementIfOdd: Function;
 
   incrementIfOdd() {
     if (this.props.value % 2 !== 0) {
       this.props.onIncrement();
     }
+  }
+
+  incrementAsync() {
+    setTimeout(this.props.onIncrement, 1000);
   }
 
   render() {
@@ -37,6 +40,7 @@ class Counter extends Component<Props> {
         <button onClick={onIncrement}>+</button>
         <button onClick={onDecrement}>-</button>
         <button onClick={this.incrementIfOdd}>Increment if odd</button>
+        <button onClick={this.incrementAsync}>Increment async</button>
       </p>
     );
   }
