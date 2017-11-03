@@ -2,11 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import BSStarterTemplate from './BSStarterTemplate';
+import BSStarterTemplate from '../components/BSStarterTemplate';
 import Counter from './Counter';
-import Error404 from './Error404';
-import HelloWorld from './HelloWorld';
-import MainNav from './MainNav';
+import Error404 from '../components/Error404';
+import HelloWorld from '../components/HelloWorld';
+import MainNav from '../components/MainNav';
 import store from '../store';
 
 const App = () => (

@@ -34,14 +34,14 @@ class Counter extends Component<Props> {
   render() {
     const { onDecrement, onIncrement, value } = this.props;
     return (
-      <p>
+      <div>
         <b>{this.props.name}</b>
-        <br /> Clicked: {value} times<br />
+        <p>Clicked: {value} times</p>
         <button onClick={onIncrement}>+</button>
         <button onClick={onDecrement}>-</button>
         <button onClick={this.incrementIfOdd}>Increment if odd</button>
         <button onClick={this.incrementAsync}>Increment async</button>
-      </p>
+      </div>
     );
   }
 }
@@ -59,4 +59,5 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
+export const Unwrapped = Counter;
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);
