@@ -9,8 +9,6 @@
     "js_prettier": {
       "auto_format_on_save": true,
       "auto_format_on_save_excludes": ["*/node_modules/*", "*/package.json"],
-      "node_path": "/usr/local/bin/node",
-      "prettier_cli_path": "/usr/local/bin/prettier",
       "prettier_options": {
         "bracketSpacing": true,
         "jsxBracketSameLine": false,
