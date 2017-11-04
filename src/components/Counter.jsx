@@ -3,7 +3,8 @@
 import React, { Component } from 'react';
 
 type Props = {
-  name?: string
+  name?: string,
+  value: number
 };
 
 type State = {
@@ -15,7 +16,7 @@ class Counter extends Component<Props, State> {
     super(props);
 
     this.state = {
-      value: 0
+      value: props.value ? props.value : 0
     };
 
     this.incrementAsync = this.incrementAsync.bind(this);
