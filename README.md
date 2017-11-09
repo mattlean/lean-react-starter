@@ -24,7 +24,7 @@ While it's running, any changes you do to your JavaScript, styles, or HTML will 
 
 Source maps for both JavaScript and CSS make it easy to debug even after all of the transformations your code goes through.
 
-Avoid bugs and problems understanding your code by type checking with [Flow](https://flow.org).
+Avoid bugs and problems with understanding your code by type checking with [Flow](https://flow.org).
 
 
 ### ECMAScript 2015 Support
@@ -56,3 +56,6 @@ Export build stats which can be read with various analysis tools to help you bet
 
 ### Ready for Customization
 The configurations are designed to be as clean and minimal as possible, giving you an easier time reading, understanding, and customizing the codebase.
+
+### Redux Support
+If you want to use Redux for state management, checkout the ```redux``` branch.

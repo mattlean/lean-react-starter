@@ -3,7 +3,8 @@
 import React, { Component } from 'react';
 
 type Props = {
-  name?: string
+  name?: string,
+  value: number
 };
 
 type State = {
@@ -15,33 +16,47 @@ class Counter extends Component<Props, State> {
     super(props);
 
     this.state = {
-      value: 0
+      value: props.value ? props.value : 0
     };
 
-    this.increment = this.increment.bind(this);
-    // this.incrementAsync = this.incrementAsync.bind(this);
-    // this.incrementIfOdd = this.incrementIfOdd.bind(this);
-    this.decrement = this.decrement.bind(this);
+    this.incrementAsync = this.incrementAsync.bind(this);
+    this.incrementIfOdd = this.incrementIfOdd.bind(this);
+    this.onDecrement = this.onDecrement.bind(this);
+    this.onIncrement = this.onIncrement.bind(this);
   }
 
-  increment() {
+  onIncrement: Function;
+  onIncrement() {
     this.setState({ value: this.state.value + 1 });
   }
 
-  decrement() {
+  onDecrement: Function;
+  onDecrement() {
     this.setState({ value: this.state.value - 1 });
   }
 
-  increment: Function;
-  decrement: Function;
+  incrementAsync: Function;
+  incrementAsync() {
+    setTimeout(this.onIncrement, 1000);
+  }
+
+  incrementIfOdd: Function;
+  incrementIfOdd() {
+    if (this.state.value % 2 !== 0) {
+      this.onIncrement();
+    }
+  }
 
   render() {
     return (
-      <p>
+      <div>
         <b>{this.props.name}</b>
-        <br /> Clicked: {this.state.value} times <button onClick={this.increment}>+</button>
-        <button onClick={this.decrement}>-</button>
-      </p>
+        <p>Clicked: {this.state.value} times</p>
+        <button onClick={this.onIncrement}>+</button>
+        <button onClick={this.onDecrement}>-</button>
+        <button onClick={this.incrementIfOdd}>Increment if odd</button>
+        <button onClick={this.incrementAsync}>Increment async</button>
+      </div>
     );
   }
 }

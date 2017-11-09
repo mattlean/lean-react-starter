@@ -3,25 +3,19 @@
 import React, { Component } from 'react';
 
 import NavItem from './NavItem';
+import type { NavItemProps } from './NavItem';
 
-type NavItemObj = {
-  aClass: string,
-  href: string,
-  liClass?: string,
-  text?: string
-};
-
-type Props = {
+type NavbarProps = {
   brand?: string,
-  navItems?: Array<NavItemObj>
+  navItems?: Array<NavItemProps>
 };
 
 type State = {
   navbarsExampleDefaultClass: string
 };
 
-class Navbar extends Component<Props, State> {
-  constructor(props: Props) {
+class Navbar extends Component<NavbarProps, State> {
+  constructor(props: NavbarProps) {
     super(props);
 
     this.state = {
@@ -33,19 +27,17 @@ class Navbar extends Component<Props, State> {
     const navItemList = [];
 
     if (this.props.navItems) {
-      if (this.props.navItems.length > 0) {
-        Object.values(this.props.navItems).forEach(navItem => {
-          navItemList.push(
-            <NavItem
-              key={navItem.text}
-              aClass={navItem.aClass}
-              href={navItem.href}
-              liClass={navItem.liClass}
-              text={navItem.text}
-            />
-          );
-        });
-      }
+      this.props.navItems.forEach(navItem => {
+        navItemList.push(
+          <NavItem
+            key={navItem.text}
+            aClass={navItem.aClass}
+            href={navItem.href}
+            liClass={navItem.liClass}
+            text={navItem.text}
+          />
+        );
+      });
     }
 
     return (
