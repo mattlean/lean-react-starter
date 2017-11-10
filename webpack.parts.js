@@ -11,16 +11,14 @@ const webpack = require('webpack');
 exports.autoprefix = () => ({
   loader: 'postcss-loader',
   options: {
-    plugins: () => ([
+    plugins: () => [
       require('autoprefixer')() // eslint-disable-line global-require
-    ])
+    ]
   }
 });
 
-exports.clean = (path) => ({
-  plugins: [
-    new CleanWebpackPlugin([path])
-  ]
+exports.clean = path => ({
+  plugins: [new CleanWebpackPlugin([path])]
 });
 
 exports.devServer = ({ contentBase, host, port } = {}) => ({
@@ -35,10 +33,8 @@ exports.devServer = ({ contentBase, host, port } = {}) => ({
   }
 });
 
-exports.extractBundles = (bundles) => ({
-  plugins: bundles.map((bundle) => (
-    new webpack.optimize.CommonsChunkPlugin(bundle))
-  )
+exports.extractBundles = bundles => ({
+  plugins: bundles.map(bundle => new webpack.optimize.CommonsChunkPlugin(bundle))
 });
 
 exports.extractStyles = ({ exclude, include, use }) => {
@@ -84,9 +80,7 @@ exports.lintJS = ({ exclude, include, options }) => ({
 });
 
 exports.lintStyles = () => ({
-  plugins: [
-    new StyleLintPlugin()
-  ]
+  plugins: [new StyleLintPlugin()]
 });
 
 exports.minCSS = ({ options }) => ({
@@ -104,9 +98,7 @@ exports.minJS = () => ({
 });
 
 exports.purifyCSS = ({ paths }) => ({
-  plugins: [
-    new PurifyCSSPlugin({paths})
-  ]
+  plugins: [new PurifyCSSPlugin({ paths })]
 });
 
 exports.loadImgs = ({ exclude, include, options } = {}) => ({
