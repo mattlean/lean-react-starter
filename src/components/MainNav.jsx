@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const MainNav = () => (
   <div id="main-nav">
     <h1>Lean React Starter</h1>
-    <ul className="nav flex-column">
+    <ul className="nav">
       <li className="nav-item">
         <Link className="nav-link" to="/hello_world">
           Hello World!
