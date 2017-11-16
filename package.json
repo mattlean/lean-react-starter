@@ -25,6 +25,7 @@
     "url": "git+https://github.com/IsaacLean/lean-react-starter.git"
   },
   "author": "Matthew Lean",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/IsaacLean/lean-react-starter/issues"
   },
@@ -47,9 +48,9 @@
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.2",
     "enzyme-to-json": "^3.1.4",
-    "eslint": "^4.10.0",
+    "eslint": "^4.11.0",
     "eslint-config-airbnb": "^16.1.0",
-    "eslint-config-prettier": "^2.6.0",
+    "eslint-config-prettier": "^2.7.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-flowtype": "^2.39.1",
     "eslint-plugin-import": "^2.8.0",
@@ -69,7 +70,7 @@
     "nodemon": "^1.12.1",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "postcss-loader": "^2.0.6",
-    "prettier": "^1.7.4",
+    "prettier": "^1.8.2",
     "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0",
     "react-test-renderer": "^16.0.0",
