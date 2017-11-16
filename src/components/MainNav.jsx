@@ -7,7 +7,7 @@ const MainNav = () => (
     <ul className="nav">
       <li className="nav-item">
         <Link className="nav-link" to="/hello_world">
-          Hello World!
+          Hello World
         </Link>
         <Link className="nav-link" to="/image">
           Image
