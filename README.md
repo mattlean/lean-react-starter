@@ -54,3 +54,6 @@ The configurations are designed to be as clean and minimal as possible, giving y
 
 ### Redux Support
 If you want to use [Redux](https://redux.js.org) for state management, checkout the ```redux``` branch.
+
+### Need Help?
+Check out the [GitHub wiki](https://github.com/IsaacLean/lean-react-starter/wiki)!
