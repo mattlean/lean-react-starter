@@ -93,7 +93,7 @@ const prodConfig = merge([
     }
   ]),
 
-  parts.genSourceMaps({ type: 'source-map' }),
+  // parts.genSourceMaps({ type: 'source-map' }),
 
   parts.extractStyles({ use: ['css-loader', 'sass-loader', parts.autoprefix()] }),
 
