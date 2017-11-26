@@ -43,12 +43,12 @@ const commonConfig = merge([
 
   parts.lintJS({
     include: PATHS.src,
-    options: {emitWarning: true}
+    options: { emitWarning: true }
   }),
 
-  parts.lintStyles({include: PATHS.src}),
+  parts.lintStyles({ include: PATHS.src }),
 
-  parts.loadJS({include: PATHS.src})
+  parts.loadJS({ include: PATHS.src })
 ]);
 
 const prodConfig = merge([
@@ -85,11 +85,7 @@ const prodConfig = merge([
   parts.extractBundles([
     {
       name: 'vendor',
-      minChunks: ({resource}) => (
-        resource &&
-        resource.indexOf('node_modules') >= 0 &&
-        resource.match(/\.js$/)
-      )
+      minChunks: ({ resource }) => resource && resource.indexOf('node_modules') >= 0 && resource.match(/\.js$/)
     },
     {
       minChunks: Infinity,
@@ -97,12 +93,12 @@ const prodConfig = merge([
     }
   ]),
 
-  parts.genSourceMaps({type: 'source-map'}),
+  // parts.genSourceMaps({ type: 'source-map' }),
 
-  parts.extractStyles({use: ['css-loader', 'sass-loader', parts.autoprefix()]}),
+  parts.extractStyles({ use: ['css-loader', 'sass-loader', parts.autoprefix()] }),
 
   parts.purifyCSS({
-    paths: glob.sync(`${PATHS.src}/**/*.js`, {nodir: true})
+    paths: glob.sync(`${PATHS.src}/**/*.{js,jsx}`, { nodir: true })
   }),
 
   parts.loadImgs({
@@ -112,10 +108,7 @@ const prodConfig = merge([
     }
   }),
 
-  parts.setFreeVariable(
-    'process.env.NODE_ENV',
-    'production'
-  )
+  parts.setFreeVariable('process.env.NODE_ENV', 'production')
 ]);
 
 const devConfig = merge([
@@ -126,7 +119,7 @@ const devConfig = merge([
     }
   },
 
-  parts.genSourceMaps({type: 'cheap-eval-source-map'}),
+  parts.genSourceMaps({ type: 'cheap-eval-source-map' }),
 
   parts.devServer({
     contentBase: PATHS.build,
@@ -139,10 +132,10 @@ const devConfig = merge([
   parts.loadImgs()
 ]);
 
-module.exports = (env) => {
-  if(env === 'production') {
+module.exports = env => {
+  if (env === 'production') {
     return merge(commonConfig, prodConfig);
-  } else if(env === 'debug') {
+  } else if (env === 'debug') {
     /* eslint-disable */
     console.log('webpack config debug started...');
     debugger;
