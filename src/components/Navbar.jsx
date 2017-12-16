@@ -42,7 +42,7 @@ class Navbar extends Component<NavbarProps, State> {
 
     return (
       <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a className="navbar-brand" href="/bootstrap_starter_template">
+        <a className="navbar-brand" href="/bootstrap-starter-template">
           {this.props.brand}
         </a>
         <button

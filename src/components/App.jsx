@@ -12,9 +12,9 @@ const App = () => (
   <Router>
     <Switch>
       <Route exact path="/" component={MainNav} />
-      <Route exact path="/bootstrap_starter_template" component={BSStarterTemplate} />
+      <Route exact path="/bootstrap-starter-template" component={BSStarterTemplate} />
       <Route exact path="/counter" render={() => <Counter name="Counter Example" />} />
-      <Route exact path="/hello_world" component={HelloWorld} />
+      <Route exact path="/hello-world" component={HelloWorld} />
       <Route exact path="/image" component={Image} />
       <Route component={Error404} />
     </Switch>
