@@ -17,6 +17,12 @@
   },
   "plugins": ["flowtype", "prettier", "react"],
   "rules": {
-    "jsx-a11y/anchor-is-valid": 0
+    "jsx-a11y/anchor-is-valid": [
+      "warn",
+      {
+        "components": ["Link"],
+        "specialLink": ["to"]
+      }
+    ]
   }
 }

@@ -26,7 +26,7 @@ const commonConfig = merge([
 
     plugins: [
       new HtmlWebpackPlugin({
-        template: `${PATHS.src}/index.ejs`
+        template: `${PATHS.src}/index.html`
       })
     ],
 
