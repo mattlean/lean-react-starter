@@ -7,7 +7,7 @@ Use the latest trends so you can fit in with the Silicon Valley hipsters:
 
 * [React](https://reactjs.org/) (v16)
 * [React Router](https://github.com/ReactTraining/react-router) (v4)
-* [Bootstrap](https://getbootstrap.com) (v4 Beta)
+* [Bootstrap](https://getbootstrap.com) (v4)
 
 ### Easy Setup
 All dependencies are managed through npm. Run ```npm install``` to download and install everything you need to run the project.
