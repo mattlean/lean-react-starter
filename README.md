@@ -1,3 +1,5 @@
+**THIS PROJECT HAS BEEN DEPRECATED IN FAVOR OF [LEAN JAVASCRIPT APPLICATION STARTER](https://github.com/IsaacLean/lean-js-app-starter).**
+
 # Lean React Starter
 This codebase can help you kickoff your next React project.
 
